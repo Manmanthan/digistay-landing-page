@@ -33,7 +33,7 @@ const ContactUs = () => {
           height={300}
           className="aspect-video rounded-xl object-cover"
         />
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col items-center gap-12">
           <div className="flex flex-col gap-6">
             {CONTACT_US_DATA.map((data) => (
               <div key={data.label} className="flex items-center gap-4">

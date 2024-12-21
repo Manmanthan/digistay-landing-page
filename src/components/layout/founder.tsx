@@ -8,11 +8,13 @@ const FOUNDERS_DATA = [
     image: AbhinavImage,
     name: "Abhinav Gupta",
     position: "Cofounder & CEO",
+    description: `<strong>Ex-Founder CamCann</strong>,<br/> Ex-Refyne, IIMU, VIT`,
   },
   {
     image: ManthanImage,
-    name: "Man Manthan Bhardwaj",
+    name: "Manthan Bhardwaj",
     position: "Cofounder & CPO",
+    description: `<strong>Ex-Refyne</strong>,<br/> Ex-Paymentus, NMIMS`,
   },
 ]
 
@@ -36,16 +38,22 @@ const Founder = () => {
           <div key={data.name} className="flex flex-col gap-6">
             <Image
               src={data.image}
-              alt={"Founders-Image"}
+              alt={`${data.name}'s image`}
               width={200}
               height={200}
               className="aspect-square bg-gradient-to-t from-primary"
             />
-            <div className="flex flex-col gap-2">
-              <span className="text-xl font-semibold text-secondary">
-                {data.name}
-              </span>
-              <span className="text-xs text-secondary">{data.position}</span>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
+                <span className="text-xl font-semibold text-secondary">
+                  {data.name}
+                </span>
+                <span className="text-xs text-secondary">{data.position}</span>
+              </div>
+              <div
+                className="text-sm text-muted-foreground"
+                dangerouslySetInnerHTML={{ __html: data.description }}
+              ></div>
             </div>
           </div>
         ))}
