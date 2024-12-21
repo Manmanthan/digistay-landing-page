@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import Footer from "@/components/layout/footer"
 import { LogoIcon } from "@/components/logo"
 import Navbar from "@/components/navbar"
 
@@ -77,14 +78,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="flex w-full flex-col items-center">
           <Navbar />
           {children}
-          <div className="flex w-full flex-col items-center bg-secondary">
-            <div className="flex w-full max-w-screen-xl flex-col items-center gap-2 py-5">
-              <LogoIcon />
-              <span className="text-base text-background">
-                Copyright © 2024 Digistay
-              </span>
-            </div>
-          </div>
+          <Footer />
         </div>
       </body>
     </html>

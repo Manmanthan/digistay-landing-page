@@ -58,7 +58,7 @@ const Pricing = () => {
           effortlessly.
         </span>
       </div>
-      <div className="flex size-full flex-col  items-center justify-between gap-6 xl:flex-row">
+      <div className="grid w-full grid-cols-1 gap-6 xl:grid-cols-3">
         {PRICING_DATA.map((data) => (
           <PriceCard key={data.type} {...data} />
         ))}
@@ -83,16 +83,18 @@ const PriceCard = ({
   features: { point: string }[]
 }) => {
   return (
-    <div className="flex h-full w-full max-w-xs flex-col justify-between rounded-xl border">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl border">
+      {/* Header */}
       <div className="flex-none rounded-t-xl bg-secondary px-8 py-12">
         <span className="text-3xl font-bold text-background">{type}</span>
       </div>
+      {/* Features */}
       <div className="flex grow flex-col gap-6 px-8 py-12">
         {features.map((data) => (
           <div key={data.point} className="flex items-center gap-2">
             <Image
               src={TickIcon}
-              alt={"icon"}
+              alt="Feature Icon"
               width={40}
               height={40}
               className="aspect-square object-cover"
@@ -101,7 +103,8 @@ const PriceCard = ({
           </div>
         ))}
       </div>
-      <div className="flex h-fit flex-col items-center gap-4 px-8 py-12">
+      {/* Footer */}
+      <div className="flex flex-col items-center gap-4 px-8 py-12">
         <span className="text-2xl text-secondary">{price}</span>
         <Button variant={"outline"} asChild>
           <Link href={href}>{btnText}</Link>

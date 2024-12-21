@@ -19,7 +19,7 @@ const FOUNDERS_DATA = [
 const Founder = () => {
   return (
     <div
-      id="founder"
+      id="team"
       className="flex w-full flex-col gap-12 bg-muted px-4 py-20 xl:px-0"
     >
       <div className="flex flex-col items-center gap-4">
@@ -37,8 +37,8 @@ const Founder = () => {
             <Image
               src={data.image}
               alt={"Founders-Image"}
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               className="aspect-square bg-gradient-to-t from-primary"
             />
             <div className="flex flex-col gap-2">

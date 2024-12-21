@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <section className="w-full bg-secondary py-4">
       <div className="container">
-        <nav className="hidden justify-between lg:flex">
+        <nav className="hidden justify-start lg:flex">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <LogoIconWithText />
@@ -44,9 +44,9 @@ const Navbar = () => {
                     variant: "link",
                   })
                 )}
-                href="#investor"
+                href="#team"
               >
-                Investor
+                Team
               </a>
               <a
                 className={cn(
@@ -74,12 +74,6 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-          <div className="flex gap-2">
-            <Button variant={"ghost"} className="text-background">
-              Sign in
-            </Button>
-            <Button variant={"outline"}>Sign up</Button>
-          </div>
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
@@ -100,8 +94,8 @@ const Navbar = () => {
                   <a href="#feature" className="font-semibold">
                     Feature
                   </a>
-                  <a href="#investor" className="font-semibold">
-                    Investor
+                  <a href="#team" className="font-semibold">
+                    Team
                   </a>
                   <a href="#contact" className="font-semibold">
                     Contact
