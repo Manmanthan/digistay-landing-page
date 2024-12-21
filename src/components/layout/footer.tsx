@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="grid items-start justify-end gap-10 px-10">
+          <div className="grid items-start gap-10 xl:justify-end xl:px-10">
             {navigationItems.map((item) => (
               <div
                 key={item.title}
