@@ -12,7 +12,7 @@ export type SiteConfig = {
     author: string
   }
   links: {
-    github: string
+    support: string
   }
   ogImage: string
 }

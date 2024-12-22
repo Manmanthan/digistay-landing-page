@@ -79,6 +79,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Navbar />
           {children}
           <Footer />
+          <div className="w-full bg-secondary p-4 text-center text-sm text-background">
+            <span>Copyright © 2024 Openquest tech pvt ltd</span>
+          </div>
         </div>
       </body>
     </html>

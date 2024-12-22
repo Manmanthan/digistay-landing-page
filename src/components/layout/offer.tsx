@@ -1,6 +1,9 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import OfferImage from "@/../public/offer.svg"
+
+import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
@@ -24,7 +27,11 @@ const Offer = () => {
               Get 1 Year Free Subscription When You Sign Up Today.
             </p>
           </div>
-          <Button className="w-fit">Claim Your Free Subscription Now</Button>
+          <Button className="w-fit" asChild>
+            <Link href={siteConfig.links.support}>
+              Claim Your Free Subscription Now
+            </Link>
+          </Button>
         </div>
         {/* OFFER IMAGE */}
         <div className="flex w-full flex-col items-center">

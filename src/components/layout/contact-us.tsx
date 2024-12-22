@@ -1,9 +1,12 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import ContactImage from "@/../public/contact.png"
 import EmailIcon from "@/../public/email.svg"
 import LocationIcon from "@/../public/location.svg"
 import PhoneIcon from "@/../public/phone.svg"
+
+import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
@@ -51,8 +54,12 @@ const ContactUs = () => {
             ))}
           </div>
           <div className="flex items-center gap-6">
-            <Button>Schedule a Demo</Button>
-            <Button variant={"outline"}>Speak with Our Team</Button>
+            <Button asChild>
+              <Link href={siteConfig.links.support}>Schedule a Demo</Link>
+            </Button>
+            <Button variant={"outline"} asChild>
+              <Link href={siteConfig.links.support}>Speak with Our Team</Link>
+            </Button>
           </div>
         </div>
       </div>

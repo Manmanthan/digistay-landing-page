@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <LogoIconWithText />
               <p className="max-w-lg text-left text-base leading-relaxed text-background/75">
-                Revolutionizing Hospitality with DigiStay
+                Openquest tech pvt ltd
               </p>
             </div>
             <div className="flex flex-row gap-20">

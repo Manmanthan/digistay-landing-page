@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import TickIcon from "@/../public/tick.svg"
 
+import { siteConfig } from "@/config/site"
+
 import { Button } from "../ui/button"
 
 const PRICING_DATA = [
@@ -10,7 +12,7 @@ const PRICING_DATA = [
     type: "Basic",
     price: "Free",
     btnText: "Start Free Today",
-    href: "/",
+    href: siteConfig.links.support,
     features: [
       { point: "Smart Check-In/Check-Out" },
       { point: "Payment Gateway Integration" },
@@ -20,7 +22,7 @@ const PRICING_DATA = [
     type: "Pro",
     price: "₹100 / Room / Month",
     btnText: "Buy Now",
-    href: "/",
+    href: siteConfig.links.support,
     features: [
       { point: "Everything in Basic" },
       { point: "Up to 5 Years Data Storage" },
@@ -33,7 +35,7 @@ const PRICING_DATA = [
     type: "Enterprise",
     price: "₹300 / Room / Month",
     btnText: "Contact Sales",
-    href: "/",
+    href: siteConfig.links.support,
     features: [
       { point: "All Pro Features" },
       { point: "Custom Integrations" },

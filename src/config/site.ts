@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
     author: "https://rdev.pro",
   },
   links: {
-    github: "https://github.com",
+    support: "mailto:Support@digistay.co.in",
   },
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.jpg`,
 }

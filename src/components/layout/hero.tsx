@@ -1,6 +1,9 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import HeroImage from "@/../public/hero.svg"
+
+import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
@@ -22,7 +25,9 @@ const Hero = () => {
               scalable solutions for the modern hospitality industry.
             </p>
           </div>
-          <Button className="w-fit">Get in Touch with Us</Button>
+          <Button className="w-fit" asChild>
+            <Link href={siteConfig.links.support}>Get in Touch with Us</Link>
+          </Button>
         </div>
         <Image
           src={HeroImage}
